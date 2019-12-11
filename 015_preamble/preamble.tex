@@ -69,14 +69,15 @@ the document more easily:
 \section{Provided Compute Infrastructure}
 %========================
 
-For the purposes of this training, we are providing you with access to a virtual cluster running on top of
-AWS. The specification of this cluster is as follows:
+For the purposes of this training, we are providing you with access to an auto-scaling virtual cluster running on top of AWS.
+This has been provisioned through Ronin (\url{https://ronin.cloud}).
+The specification of this cluster is as follows:
 
 \begin{description}[style=multiline,labelindent=0cm,align=left,leftmargin=0.5cm]
   \item[Head Node]\hfill\\
-    \texttt{m5d.4xlarge} (16 vCPU, 64G RAM and 2x300 SSD)
+    \texttt{m5ad.4xlarge} (16 vCPU, 64G RAM and 2x300 SSD)
   \item[Compute Nodes]\hfill\\
-    \texttt{t2.medium}, min: 30 max: 50
+	  \texttt{t2.medium} (2 vCPU, 4G RAM and EBS), min nodes: 20 max nodes: 40, spot price enabled
   \item[Shared Storage]\hfill\\
     \texttt{1000G}
 \end{description}
