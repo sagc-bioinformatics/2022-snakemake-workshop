@@ -54,7 +54,15 @@ packages=(
   oberdiek
   colortbl
   hyperref
-  ifetex
+  iftex
+  zref
+  atbegshi
+  accsupp
+  pdfescape
+  letltxmacro
+  bitset
+  atveryend
+  rerunfilecheck
 )
 /usr/local/texlive/bin/x86_64-linux/tlmgr \
   -repository ${CTAN_MIRROR_URL:-'http://mirror.ctan.org'}/systems/texlive/tlnet \
