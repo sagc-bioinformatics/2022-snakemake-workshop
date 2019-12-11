@@ -55,6 +55,7 @@ packages=(
   colortbl
   hyperref
   iftex
+  zref
 )
 /usr/local/texlive/bin/x86_64-linux/tlmgr \
   -repository ${CTAN_MIRROR_URL:-'http://mirror.ctan.org'}/systems/texlive/tlnet \
