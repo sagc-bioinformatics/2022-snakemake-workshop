@@ -69,17 +69,20 @@ the document more easily:
 \section{Provided Compute Infrastructure}
 %========================
 
-For the purposes of this training, we are providing you with access to an auto-scaling virtual cluster running on top of AWS.
-This has been provisioned through Ronin (\url{https://ronin.cloud}).
+TODO
+
+For the purposes of this training, we are providing you with access to a virtual cluster running on top of AWS.
 The specification of this cluster is as follows:
 
 \begin{description}[style=multiline,labelindent=0cm,align=left,leftmargin=0.5cm]
   \item[Head Node]\hfill\\
-    \texttt{m5ad.4xlarge} (16 vCPU, 64G RAM and 2x300 SSD)
+    \texttt{i3en.12xlarge} (48 vCPU, 384G RAM and 4 x 7500 NVMe SSD, USD$6.504/hr)
   \item[Compute Nodes]\hfill\\
-	  \texttt{t2.medium} (2 vCPU, 4G RAM and EBS), min nodes: 20 max nodes: 40, spot price enabled
+	  \texttt{i3en.xlarge} x 0-6 (4 vCPU, 32G RAM and 1 x 2500 NVMe SSD, USD $0.542/hr/ea)
   \item[Shared Storage]\hfill\\
-    \texttt{1000G}
+	  \texttt{12 TBytes} - FSx for Lustre (USD$0.06963/Tb/hr)
+  \item[Total]\hfil\\
+	  USD$7.34 - 10.59/hr (AUD $10.85-15.65/hr)
 \end{description}
 
 %========================
@@ -111,14 +114,14 @@ squeue
 squeue --user ${USER}
 \end{lstlisting}
 
-For convienience we have provided you with the \texttt{sq} function which produces nicer output than the default \texttt{squeue}:
-
-\begin{lstlisting}
-# All jobs in the queue
-sq
-
-# Just your own jobs
-sq --user ${USER}
-\end{lstlisting}
+%For convienience we have provided you with the \texttt{sq} function which produces nicer output than the default \texttt{squeue}:
+%
+%\begin{lstlisting}
+%# All jobs in the queue
+%sq
+%
+%# Just your own jobs
+%sq --user ${USER}
+%\end{lstlisting}
 
 \end{note}
